@@ -45,8 +45,6 @@ function setAnswersNumber() {
   while (answers.length < 2) {
     wrongAnswer1 = (Math.random() * 8.5).toFixed(1);
     wrongAnswer2 = getRandomNumber(0, 13);
-    console.log(wrongAnswer1);
-    console.log(wrongAnswer2);
 
 
     if ((result !== wrongAnswer1 || result !== wrongAnswer2) && (wrongAnswer1 !== wrongAnswer2)) {

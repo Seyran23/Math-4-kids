@@ -12,13 +12,20 @@ body {
 }
 
 .header {
-  padding: 20px 30px;
   color: white;
   background-color: #fe4a49;
 
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px 30px;
 }
 
 .logo_container {
@@ -39,7 +46,7 @@ body {
 .nav_list {
   display: flex;
   align-items: center;
-
+  justify-content: center;
   padding: 5px;
 }
 
@@ -54,6 +61,16 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+  transition-duration: 0.4s;
+}
+
+.nav_list:hover a {
+  opacity: 0.4;
+}
+
+.nav_list a:hover {
+  opacity: 1;
+  color: #fff;
 }
 
 .active_page::after {
@@ -66,9 +83,23 @@ a {
   background-color: white;
 }
 
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .nav_list {
+  transform: scale(1, 1);
+}
+
 .math_section {
-  display: flex;
+  display: grid;
   gap: 10px;
+  grid-template-columns: 4fr 1fr;
+
   padding: 10px;
   font-size: 10rem;
 }
@@ -79,7 +110,6 @@ a {
   justify-content: center;
   gap: 10px;
   background-color: white;
-  width: 80%;
 }
 
 .problem_container,
@@ -112,10 +142,10 @@ a {
 }
 
 .answers_container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
   gap: 10px;
-  width: 20%;
 }
 
 .answer {
@@ -154,4 +184,72 @@ a {
 
 .answer:nth-child(3):hover {
   color: #fed766;
+}
+
+@media (max-width: 1200px) {
+  .math_section {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .math_section {
+    font-size: 7rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .list_item {
+    margin: 0 30px;
+  }
+
+  .math_section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+
+    font-size: 5rem;
+  }
+
+  .answers_container {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav_list {
+    flex-direction: column;
+    background-color: #fe4a49;
+    align-items: start;
+    position: absolute;
+    top: 70px;
+    left: -10px;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+
+  .nav_list li {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width:400px) {
+  .header_title {
+    font-size: 25px;
+  }
+  
+  .math_section {
+    font-size: 4rem;
+  }
+
 }
