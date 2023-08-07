@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts/add.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+  </head>
+  <body>
+    <audio id="myAudio">
+      <source src="./audio/wrong-buzzer.mp3" />
+    </audio>
+
+    <header class="header">
+      <div class="logo_container">
+        <img class="trophy_img" src="./logo/trophy.png" alt="trophy" />
+        <h2 class="header_title">MATH 4 KIDS</h2>
+      </div>
+      <ul class="nav_list">
+        <li class="list_item active_page">
+          <a href="#">Add</a>
+        </li>
+        <li class="list_item">
+          <a href="subtract.html">Subtract</a>
+        </li>
+        <li class="list_item">
+          <a href="multiply.html">Multiply</a>
+        </li>
+        <li class="list_item">
+          <a href="divide.html">Divide</a>
+        </li>
+      </ul>
+    </header>
+    <section class="math_section">
+      <div class="problem_container">
+        <div class="first_number"></div>
+        <div class="operation">+</div>
+        <div class="second_number"></div>
+        <div class="equal">=</div>
+        <div class="question">?</div>
+      </div>
+      <div class="answers_container">
+        <div class="answer option1"></div>
+        <div class="answer option2"></div>
+        <div class="answer option3"></div>
+      </div>
+    </section>
+  </body>
+</html>

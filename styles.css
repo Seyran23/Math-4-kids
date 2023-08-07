@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Luckiest Guy", cursive;
+}
+
+body {
+  height: 100vh;
+  background-color: #e6e6ea;
+}
+
+.header {
+  padding: 20px 30px;
+  color: white;
+  background-color: #fe4a49;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+}
+
+.trophy_img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.header_title {
+  font-size: 30px;
+}
+
+.nav_list {
+  display: flex;
+  align-items: center;
+
+  padding: 5px;
+}
+
+.list_item {
+  margin: 0 10px;
+  list-style-type: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.active_page::after {
+  content: "";
+  position: absolute;
+  margin-top: 25px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+}
+
+.math_section {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  font-size: 10rem;
+}
+
+.problem_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  width: 80%;
+}
+
+.problem_container,
+.answer {
+  box-shadow: 0 3px 3px 2px rgb(159, 158, 158);
+  border-radius: 3px;
+}
+
+.problem_container div {
+  padding: 20px 10px;
+}
+
+.problem_container div:nth-child(1) {
+  color: #fe4a49;
+}
+
+.problem_container div:nth-child(2) {
+  color: #2ab7ca;
+}
+.problem_container div:nth-child(3) {
+  color: #fed766;
+}
+
+.problem_container div:nth-child(4) {
+  color: #f86624;
+}
+
+.problem_container div:nth-child(5) {
+  color: gray;
+}
+
+.answers_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 20%;
+}
+
+.answer {
+  padding: 0 10px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.answer:nth-child(1) {
+  background-color: #fe4a49;
+}
+
+.answer:nth-child(2) {
+  background-color: #2ab7ca;
+}
+
+.answer:nth-child(3) {
+  background-color: #fed766;
+}
+
+.answer:nth-child(1):hover,
+.answer:nth-child(2):hover,
+.answer:nth-child(3):hover {
+  background-color: white;
+  transition: 1s;
+}
+
+.answer:nth-child(1):hover {
+  color: #fe4a49;
+}
+
+.answer:nth-child(2):hover {
+  color: #2ab7ca;
+}
+
+.answer:nth-child(3):hover {
+  color: #fed766;
+}
